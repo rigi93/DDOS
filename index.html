@@ -1,0 +1,45 @@
+<html>
+{% block content %}
+<head></head>
+<Title> Output Page </Title>
+<body bgcolor="#80ff00" font-family: Arial>
+<center>
+<h1 style="color:#e60000;"> Thank you for using RIPRO </h1>
+<h6 style="color:#e60000;"> DDOS secured </h6>
+</center>
+<br>
+<br>
+<center>
+<h3> The output for your query is: </h3>
+</center>
+<div class= "tableout">
+<CENTER>
+<table BORDER=5 BORDERCOLOR=WHITE width="600">
+<tr>
+<th><strong> Employee no: <width="100"></strong></th> 
+<th><strong> Birth Date:<width="100"></strong></th> 
+<th><strong> First Name:<width="100"></strong></th> 
+<th><strong> Last Name:<width="100"></strong></th> 
+<th><strong> Gender:<width="100"></strong></th> 
+<th><strong> Date of hiring:<width="100"></strong></th> 
+</tr>
+</center>
+</table>
+<table BORDER=5 BORDERCOLOR=WHITE width="600">
+{% for employees in employees %}
+<center>
+<tr>
+<td>{{ employees.emp_no }} <width="100"></td>
+<td> {{ employees.birth_date }} <width="100"></td>
+<td> {{ employees.first_name }}<width="100"></td>
+<td>{{ employees.last_name }}<width="100"></td>
+<td>{{ employees.gender }}<width="100"></td>
+<td>{{ employees.hire_date }}<width="100"></td>
+</tr>
+</CENTER>
+{% endfor %}
+</table>
+</div>
+</body>
+{% endblock %}
+</html>
